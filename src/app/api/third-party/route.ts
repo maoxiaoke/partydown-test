@@ -1,3 +1,4 @@
+//@ts-ignore
 import { isUrlAllowed } from '@superside-oss/partytown-gtm/util';
 
 const PASS_THROUGH_HEADERS = [
@@ -52,7 +53,7 @@ async function getResponse(maybeUrl: string | null) {
   return new Response(data, {
     status: response.status,
     headers
-  })
+  });
 }
 
 export async function GET(req: Request) {
