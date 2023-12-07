@@ -11,7 +11,6 @@ export function ThirdParty() {
   return (
     <>
       <Partytown
-        debug={true}
         forward={['dataLayer.push', GTM_TAG_ASSISTANT_FORWARDER]}
         mainWindowAccessors={[GTM_TAG_ASSISTANT_ACCESSOR]}
         resolveUrl={partytownResolveUrl}
