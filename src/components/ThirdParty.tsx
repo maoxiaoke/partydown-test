@@ -14,11 +14,7 @@ export function ThirdParty() {
         debug={true}
         forward={['dataLayer.push', GTM_TAG_ASSISTANT_FORWARDER]}
         mainWindowAccessors={[GTM_TAG_ASSISTANT_ACCESSOR]}
-        resolveUrl={(...props) => {
-          console.log('resolving url', props);
-          // @ts-ignore
-          return partytownResolveUrl(...props);
-        }}
+        resolveUrl={partytownResolveUrl}
       />
       <GTMScript gtmId={process.env.NEXT_PUBLIC_GTM_ID as string} />
     </>
